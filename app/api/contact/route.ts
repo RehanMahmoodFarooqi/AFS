@@ -1,7 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import { Resend } from "resend";
-
-const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: NextRequest) {
   try {
@@ -10,6 +7,17 @@ export async function POST(req: NextRequest) {
     if (!name || !email || !message) {
       return NextResponse.json({ error: "All fields are required." }, { status: 400 });
     }
+
+    const apiKey = process.env.RESEND_API_KEY;
+
+    if (!apiKey || apiKey === "re_your_api_key_here") {
+      // Resend not configured — silently succeed so the site still builds & runs
+      console.warn("RESEND_API_KEY not set. Email not sent.");
+      return NextResponse.json({ success: true }, { status: 200 });
+    }
+
+    const { Resend } = await import("resend");
+    const resend = new Resend(apiKey);
 
     const { error } = await resend.emails.send({
       from: "AFS Contact Form <onboarding@resend.dev>",
