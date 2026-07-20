@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 195" fill="none">
+
+  <!-- A: bold blue, slanted, with crossbar -->
+  <polygon points="10,148  48,10  78,10  118,148  88,148  62,52  38,148" fill="#1e3a9e"/>
+  <rect x="88" y="10" width="32" height="138" fill="#1e3a9e"/>
+  <rect x="38" y="90" width="82" height="22" fill="#1e3a9e"/>
+
+  <!-- F: solid orange block with two cut-outs -->
+  <rect x="148" y="10" width="140" height="138" fill="#ff5722"/>
+  <rect x="198" y="58" width="90" height="40" fill="white"/>
+  <rect x="198" y="116" width="90" height="32" fill="white"/>
+
+  <!-- S: thick bold blue -->
+  <path d="
+    M 460,28 C 440,12 412,8 386,12
+    C 354,17 330,38 328,64
+    C 326,86 340,102 362,112
+    L 402,124 C 420,130 432,140 430,156
+    C 428,170 414,178 396,178
+    C 374,178 354,166 344,148
+    L 322,162 C 336,184 362,196 396,196
+    C 430,196 456,180 460,156
+    C 464,132 448,116 422,106
+    L 382,94 C 364,88 352,78 354,62
+    C 356,48 370,38 390,36
+    C 410,34 430,42 442,58 Z
+  " fill="#1e3a9e"/>
+
+  <!-- DEVELOPMENT text -->
+  <text
+    x="262" y="192"
+    text-anchor="middle"
+    font-family="'Arial Black', Impact, Arial, sans-serif"
+    font-weight="900"
+    font-size="28"
+    fill="#ff5722"
+    letter-spacing="10"
+  >DEVELOPMENT</text>
+
+</svg>
