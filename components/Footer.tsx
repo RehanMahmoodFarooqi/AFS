@@ -166,7 +166,7 @@ export default function Footer() {
               {/* Quick Contact */}
               <div className="space-y-3">
                 {[
-                  { icon: Mail, text: "info@afsdevelopment.com", href: "https://mail.google.com/mail/?view=cm&to=info@afsdevelopment.com" },
+                  { icon: Mail, text: "contact@afsdevelopment.com", href: "https://mail.google.com/mail/?view=cm&to=contact@afsdevelopment.com" },
                   { icon: Phone, text: "+1 (540) 934-0195", href: "https://api.whatsapp.com/send/?phone=15409340195&text&type=phone_number&app_absent=0" },
                   { icon: MapPin, text: "18276 Waterloo Road, Amissville, VA 20106", href: "https://maps.google.com/?q=18276+Waterloo+Road+Amissville+VA+20106" },
                 ].map((contact, i) => (

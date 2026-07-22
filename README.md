@@ -113,4 +113,4 @@ Private - AFS Development
 
 ## Support
 
-For support, email info@afsdevelopment.com
+For support, email contact@afsdevelopment.com

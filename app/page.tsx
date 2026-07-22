@@ -47,7 +47,7 @@ const localBusinessSchema = {
   image: "https://www.afsdevelopment.com/og-image.png",
   url: "https://www.afsdevelopment.com",
   telephone: "+1-540-934-0195",
-  email: "info@afsdevelopment.com",
+  email: "contact@afsdevelopment.com",
   address: {
     "@type": "PostalAddress",
     streetAddress: "18276 Waterloo Road",

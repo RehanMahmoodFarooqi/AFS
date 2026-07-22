@@ -10,6 +10,8 @@ export async function POST(req: NextRequest) {
 
     const apiKey = process.env.RESEND_API_KEY;
 
+    console.log("API Key loaded:", apiKey ? `${apiKey.substring(0, 8)}...` : "MISSING");
+
     if (!apiKey || apiKey === "re_your_api_key_here") {
       // Resend not configured — silently succeed so the site still builds & runs
       console.warn("RESEND_API_KEY not set. Email not sent.");
