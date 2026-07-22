@@ -1,30 +1,24 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
-  title: "AFS Development | Custom Software Development Services",
-  description: "Leading software development company delivering innovative digital solutions, web applications, and mobile apps.",
-  icons: {
-    icon: "/logo.svg",
-    apple: "/logo.svg",
-  },
+  title: "AFS Development | Custom Web & Mobile App Development",
+  description:
+    "AFS Development builds custom websites, mobile apps, e-commerce stores, and enterprise software. 500+ projects delivered worldwide.",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={inter.className}>
+    <html lang="en">
+      <body>
         <Header />
-        <main>{children}</main>
+        {children}
         <Footer />
       </body>
     </html>

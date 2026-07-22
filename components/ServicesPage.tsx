@@ -289,6 +289,31 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* ── Portfolio CTA ── */}
+      <section className="py-16 bg-white text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="container mx-auto px-4"
+        >
+          <p className="text-xl md:text-2xl text-slate-600 mb-6 font-medium">
+            To see all of our work and projects
+          </p>
+          <motion.a
+            href="/AFS_Profile.docx"
+            download="AFS_Profile.docx"
+            whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(255,87,34,0.3)" }}
+            whileTap={{ scale: 0.95 }}
+            className="gradient-bg text-white px-10 py-4 rounded-full font-bold text-lg shadow-xl inline-flex items-center gap-3"
+          >
+            <ArrowRight size={22} />
+            View Portfolio
+          </motion.a>
+        </motion.div>
+      </section>
+
       {/* Service Sections */}
       {serviceCategories.map((service, idx) => (
         <section

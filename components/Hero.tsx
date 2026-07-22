@@ -19,7 +19,7 @@ export default function Hero() {
     <section
       id="home"
       ref={ref}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24"
     >
       {/* Dynamic Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-white via-blue-50 to-orange-50">
@@ -86,30 +86,6 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
             className="text-center lg:text-left"
           >
-            {/* Badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              whileHover={{ scale: 1.05 }}
-              className="inline-flex items-center space-x-2 bg-gradient-to-r from-primary-100 to-accent-100 px-6 py-3 rounded-full mb-6 border border-primary-200/50 shadow-lg"
-            >
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-              >
-                <Star className="text-accent-600 fill-accent-600" size={20} />
-              </motion.div>
-              <span className="font-bold text-primary-700">
-                #1 Development Partner
-              </span>
-              <motion.div
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 2, repeat: Infinity }}
-              >
-                <Trophy className="text-primary-600" size={20} />
-              </motion.div>
-            </motion.div>
 
             {/* Main Heading */}
             <motion.h1

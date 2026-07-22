@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   keywords: [
     "web development services", "mobile app development", "Shopify developer",
     "WordPress development", "WooCommerce store", "Magento development",
-    "iOS app development", "Android app development", "SEO services",
+    "iOS app development", "Android app development", "SEO/Content Writing Services",
     "PSD to HTML", "e-commerce development", "custom software Virginia",
   ],
   alternates: { canonical: "https://www.afsdevelopment.com/services" },

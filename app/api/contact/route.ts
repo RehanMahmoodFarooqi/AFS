@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {
   try {
-    const { name, email, message } = await req.json();
+    const { name, email, phone, message } = await req.json();
 
     if (!name || !email || !message) {
       return NextResponse.json({ error: "All fields are required." }, { status: 400 });
@@ -38,6 +38,10 @@ export async function POST(req: NextRequest) {
               <td style="padding:8px 0;color:#374151;font-weight:bold;">Email</td>
               <td style="padding:8px 0;color:#111827;"><a href="mailto:${email}" style="color:#1e40af;">${email}</a></td>
             </tr>
+            ${phone ? `<tr>
+              <td style="padding:8px 0;color:#374151;font-weight:bold;">Phone</td>
+              <td style="padding:8px 0;color:#111827;">${phone}</td>
+            </tr>` : ""}
           </table>
           <hr style="border:none;border-top:1px solid #e5e7eb;margin:20px 0;" />
           <p style="color:#374151;font-weight:bold;margin-bottom:8px;">Message</p>
