@@ -29,7 +29,7 @@ const serviceCategories = [
     ],
     projects: [
       { name: "Heavy Equipment Transport", url: "https://www.heavyequipmenttransport.com/" },
-      { name: "Let's Breathe Better", url: "https://letsbreathebetter.com" },
+      { name: "Let's Breathe Better", url: "https://avcenterprises.com/" },
       { name: "Bargz", url: "https://bargz.com/" },
     ],
   },

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, Play, Star, CheckCircle2, Zap, Trophy, Users, ExternalLink } from "lucide-react";
+import { ArrowRight, Calendar, Star, CheckCircle2, Zap, Trophy, Users, ExternalLink } from "lucide-react";
 import Logo from "./Logo";
 import { useRef } from "react";
 
@@ -19,7 +19,7 @@ export default function Hero() {
     <section
       id="home"
       ref={ref}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24"
+      className="relative h-screen max-h-screen flex items-center justify-center overflow-hidden pt-20"
     >
       {/* Dynamic Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-white via-blue-50 to-orange-50">
@@ -92,7 +92,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 leading-tight"
+              className="text-4xl md:text-5xl lg:text-6xl font-black mb-3 leading-tight"
             >
               <span className="text-slate-900">Transform</span>
               <br />
@@ -112,7 +112,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-xl md:text-2xl text-slate-600 mb-8 leading-relaxed max-w-2xl"
+              className="text-base md:text-lg text-slate-600 mb-4 leading-relaxed max-w-2xl"
             >
               Award-winning software development that drives real business results.
               <span className="font-semibold gradient-text"> Fast. Reliable. Exceptional.</span>
@@ -123,7 +123,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="flex flex-wrap gap-4 justify-center lg:justify-start mb-12"
+              className="flex flex-wrap gap-3 justify-center lg:justify-start mb-6"
             >
               <motion.a
                 href="https://api.whatsapp.com/send/?phone=15409340195&text&type=phone_number&app_absent=0"
@@ -131,7 +131,7 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05, boxShadow: "0 25px 50px rgba(255, 87, 34, 0.4)" }}
                 whileTap={{ scale: 0.95 }}
-                className="gradient-bg text-white px-10 py-5 rounded-full font-bold text-lg flex items-center space-x-3 shadow-2xl group"
+                className="gradient-bg text-white px-7 py-3 rounded-full font-bold text-base flex items-center space-x-2 shadow-2xl group"
               >
                 <span>Start Your Project</span>
                 <motion.div
@@ -142,14 +142,15 @@ export default function Hero() {
                 </motion.div>
               </motion.a>
 
-              <motion.button
+              <motion.a
+                href="/#contact"
                 whileHover={{ scale: 1.05, backgroundColor: "rgba(30, 64, 175, 0.05)" }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white border-2 border-primary-600 text-primary-600 px-10 py-5 rounded-full font-bold text-lg flex items-center space-x-3 shadow-xl hover:shadow-2xl transition-all"
+                className="bg-white border-2 border-primary-600 text-primary-600 px-7 py-3 rounded-full font-bold text-base flex items-center space-x-2 shadow-xl hover:shadow-2xl transition-all"
               >
-                <Play size={24} className="fill-current" />
-                <span>Watch Demo</span>
-              </motion.button>
+                <Calendar size={24} />
+                <span>Schedule Meeting</span>
+              </motion.a>
             </motion.div>
 
             {/* Trust Indicators */}
@@ -157,7 +158,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="grid grid-cols-3 gap-6"
+              className="grid grid-cols-3 gap-4"
             >
               {[
                 { icon: Users, number: "200+", label: "Happy Clients" },
@@ -167,7 +168,7 @@ export default function Hero() {
                 <motion.div
                   key={stat.label}
                   whileHover={{ scale: 1.1, y: -5 }}
-                  className="bg-white/80 backdrop-blur-sm p-4 rounded-2xl shadow-lg border border-slate-100"
+                  className="bg-white/80 backdrop-blur-sm p-3 rounded-2xl shadow-lg border border-slate-100"
                 >
                   <stat.icon className="text-accent-600 mx-auto mb-2" size={28} />
                   <div className="text-2xl md:text-3xl font-black gradient-text">{stat.number}</div>
@@ -182,7 +183,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="relative hidden lg:block h-[600px]"
+            className="relative hidden lg:block h-[480px]"
           >
             {/* Main showcase card */}
             <motion.div
@@ -194,7 +195,7 @@ export default function Hero() {
               className="relative z-30"
               style={{ transformStyle: "preserve-3d" }}
             >
-              <div className="bg-white rounded-3xl shadow-2xl p-8 border border-slate-200">
+              <div className="bg-white rounded-3xl shadow-2xl p-6 border border-slate-200">
 
                 {/* ── Row 1: Logo + AFS Development ── */}
                 <div className="flex items-center justify-between mb-6">
@@ -248,13 +249,10 @@ export default function Hero() {
                 </div>
 
                 {/* ── Row 3: 6 project tiles ── */}
-                <div className="grid grid-cols-3 gap-3 mb-6">
+                <div className="grid grid-cols-3 gap-3 mb-4">
                   {[
                     { name: "Chemical Guys",  bg: "from-red-500 to-red-700",        icon: "🚗", url: "https://www.chemicalguys.com" },
-                    { name: "Louis XVI",      bg: "from-slate-700 to-slate-900",    icon: "⌚", url: "https://www.louisxviwatches.com" },
-                    { name: "Impact Dental",  bg: "from-blue-500 to-blue-700",      icon: "🦷", url: "https://impactdentaldesigns.com" },
                     { name: "Bargz",          bg: "from-primary-500 to-primary-700",icon: "🛒", url: "https://bargz.com" },
-                    { name: "Let's Breathe",  bg: "from-teal-500 to-teal-700",      icon: "🌿", url: "https://letsbreathebetter.com" },
                     { name: "Karner Blue",    bg: "from-accent-500 to-accent-700",  icon: "💼", url: "https://www.karnerbluecapital.com" },
                   ].map((proj) => (
                     <motion.a
@@ -263,7 +261,7 @@ export default function Hero() {
                       target="_blank"
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.08, y: -4 }}
-                      className={`h-20 bg-gradient-to-br ${proj.bg} rounded-xl flex flex-col items-center justify-center shadow-md gap-1 relative group overflow-hidden`}
+                      className={`h-16 bg-gradient-to-br ${proj.bg} rounded-xl flex flex-col items-center justify-center shadow-md gap-1 relative group overflow-hidden`}
                     >
                       <span className="text-xl">{proj.icon}</span>
                       <span className="text-white text-[9px] font-bold text-center leading-tight px-1">{proj.name}</span>

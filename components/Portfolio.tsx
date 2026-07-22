@@ -73,7 +73,7 @@ const projects: {
     type: "Health & Wellness Website",
     description: "Informational and lead-generation website for a respiratory health brand with clean UX and conversion-focused design.",
     tags: ["HTML5", "CSS3", "Health"],
-    url: "https://letsbreathebetter.com",
+    url: "https://avcenterprises.com/",
     color: "from-accent-500 to-accent-700",
     icon: Globe,
   },
