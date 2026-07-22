@@ -165,7 +165,7 @@ const serviceCategories = [
   {
     id: "seo",
     icon: Search,
-    title: "SEO Services",
+    title: "SEO/Content Writing Services",
     tagline: "First-page rankings, guaranteed",
     description:
       "Our SEO team crafts data-driven strategies tailored to your business. We research your market, target the right keywords, and use proven techniques to get you ranking — and keep you there.",

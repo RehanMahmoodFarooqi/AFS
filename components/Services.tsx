@@ -65,7 +65,7 @@ const services = [
   },
   {
     icon: Search,
-    title: "SEO Services",
+    title: "SEO/Content Writing Services",
     description: "Data-driven search engine optimisation strategies that put your website on Google's first page — guaranteed.",
     features: ["Keyword Research & Strategy", "On-Page Optimisation", "Link Building", "Performance Reporting"],
     color: "from-primary-500 to-primary-700",
