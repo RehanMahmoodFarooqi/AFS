@@ -33,7 +33,7 @@ export default function Header() {
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <a href="#home">
+        <a href="/">
           <Logo size="sm" />
         </a>
 

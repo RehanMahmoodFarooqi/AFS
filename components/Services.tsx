@@ -5,7 +5,7 @@ import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import {
   Code, Smartphone, Globe, Database, ShoppingCart, Search,
-  ArrowRight, CheckCircle, Sparkles, Layers, PenTool, TrendingUp
+  ArrowRight, CheckCircle, Sparkles, Layers, PenTool, TrendingUp, Languages
 } from "lucide-react";
 
 const services = [
@@ -89,6 +89,15 @@ const services = [
     color: "from-primary-600 to-accent-600",
     bgColor: "bg-gradient-to-br from-primary-50 to-accent-50",
     borderColor: "border-accent-400",
+  },
+  {
+    icon: Languages,
+    title: "Translation Services",
+    description: "Professional human translation across 50+ languages for websites, apps, legal documents, and marketing content — accurate, fast, and culturally precise.",
+    features: ["50+ Languages Supported", "Website & App Localisation", "Legal & Technical Translation", "Certified & Proofreaded Translations"],
+    color: "from-primary-500 to-accent-500",
+    bgColor: "bg-gradient-to-br from-primary-50 to-accent-50",
+    borderColor: "border-primary-400",
   },
 ];
 

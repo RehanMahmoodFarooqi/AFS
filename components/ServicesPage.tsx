@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import {
   Globe, ShoppingCart, Smartphone, Layers, Database, PenTool,
-  Search, TrendingUp, Code, CheckCircle, ArrowRight, Sparkles,
+  Search, TrendingUp, Code, CheckCircle, ArrowRight, Sparkles, Languages,
 } from "lucide-react";
 
 const serviceCategories = [
@@ -229,6 +229,28 @@ const serviceCategories = [
     projects: [
       { name: "E-Sports Data Scraper", url: "https://carinait.net/projects/esports/" },
     ],
+  },
+  {
+    id: "translation",
+    icon: Languages,
+    title: "Translation Services",
+    tagline: "Breaking language barriers worldwide",
+    description:
+      "We provide professional human translation across 50+ languages for websites, mobile apps, legal contracts, marketing content, and technical documentation. Every translation is reviewed by a native speaker for cultural accuracy and natural flow.",
+    color: "from-primary-500 to-accent-500",
+    bgColor: "bg-gradient-to-br from-primary-50 to-accent-50",
+    borderColor: "border-primary-400",
+    offerings: [
+      "Website & App Localisation (50+ Languages)",
+      "Legal & Contract Translation",
+      "Technical & Software Documentation",
+      "Marketing & Advertising Copy",
+      "Certified Translation (for official use)",
+      "Proofreading & Editing of Existing Translations",
+      "Multilingual SEO & Keyword Adaptation",
+      "Fast Turnaround & Confidential Handling",
+    ],
+    projects: [],
   },
 ];
 
