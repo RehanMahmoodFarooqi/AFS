@@ -102,13 +102,14 @@ export default function About() {
               ))}
             </div>
 
-            <motion.button
+            <motion.a
+              href="/#contact"
               whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(0,0,0,0.3)" }}
               whileTap={{ scale: 0.95 }}
-              className="bg-white text-primary-600 px-10 py-5 rounded-full font-bold text-lg shadow-2xl hover:bg-accent-50 transition-colors"
+              className="bg-white text-primary-600 px-10 py-5 rounded-full font-bold text-lg shadow-2xl hover:bg-accent-50 transition-colors inline-block"
             >
               Discover Our Story
-            </motion.button>
+            </motion.a>
           </motion.div>
 
           {/* Right - Stats Grid */}

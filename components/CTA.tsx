@@ -11,7 +11,7 @@ export default function CTA() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
   const [status, setStatus] = useState<Status>("idle");
   const [errorMsg, setErrorMsg] = useState("");
 
@@ -36,7 +36,7 @@ export default function CTA() {
         return;
       }
       setStatus("success");
-      setForm({ name: "", email: "", message: "" });
+      setForm({ name: "", email: "", phone: "", message: "" });
     } catch {
       setErrorMsg("Network error. Please try again.");
       setStatus("error");
@@ -61,14 +61,14 @@ export default function CTA() {
             </p>
             <div className="space-y-4 mb-8">
               <a
-                href="https://mail.google.com/mail/?view=cm&to=info@afsdevelopment.com"
+                href="https://mail.google.com/mail/?view=cm&to=contact@afsdevelopment.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-4 hover:text-accent-400 transition-colors group"
               >
                 <Mail className="text-primary-400 group-hover:text-accent-400 flex-shrink-0" size={24} />
                 <span className="text-slate-300 group-hover:text-accent-400 transition-colors">
-                  info@afsdevelopment.com
+                  contact@afsdevelopment.com
                 </span>
               </a>
             </div>
@@ -86,6 +86,9 @@ export default function CTA() {
                 className="w-full px-4 py-3 rounded-lg bg-slate-700 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-500" />
               <input type="email" name="email" value={form.email} onChange={handleChange}
                 placeholder="Your Email" required
+                className="w-full px-4 py-3 rounded-lg bg-slate-700 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-500" />
+              <input type="tel" name="phone" value={form.phone} onChange={handleChange}
+                placeholder="Your Phone Number"
                 className="w-full px-4 py-3 rounded-lg bg-slate-700 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-500" />
               <textarea rows={4} name="message" value={form.message} onChange={handleChange}
                 placeholder="Tell us about your project" required

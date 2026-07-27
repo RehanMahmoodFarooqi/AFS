@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import {
-  Code, Smartphone, Globe, Database, ShoppingCart, Search,
+  Smartphone, Globe, Database, ShoppingCart, Search,
   ArrowRight, CheckCircle, Sparkles, Layers, PenTool, TrendingUp, Languages
 } from "lucide-react";
 
@@ -74,27 +74,18 @@ const services = [
   },
   {
     icon: TrendingUp,
-    title: "Affiliate & Digital Marketing",
-    description: "Revenue-generating affiliate marketing campaigns across top platforms, driving qualified traffic and conversions.",
+    title: "Digital/Social Media Marketing",
+    description: "Revenue-generating digital marketing campaigns across top platforms, driving qualified traffic and conversions.",
     features: ["ClickBank", "JVZoo & WarriorPlus", "Ad Network Management", "Conversion Optimisation"],
     color: "from-accent-500 to-accent-700",
     bgColor: "bg-accent-50",
     borderColor: "border-accent-500",
   },
   {
-    icon: Code,
-    title: "Web Scraping & Automation",
-    description: "Custom data extraction tools, browser automation, and API integrations to streamline workflows.",
-    features: ["Structured Data Extraction", "API Integrations", "Process Automation", "Reporting Dashboards"],
-    color: "from-primary-600 to-accent-600",
-    bgColor: "bg-gradient-to-br from-primary-50 to-accent-50",
-    borderColor: "border-accent-400",
-  },
-  {
     icon: Languages,
     title: "Translation Services",
     description: "Professional human translation across 50+ languages for websites, apps, legal documents, and marketing content — accurate, fast, and culturally precise.",
-    features: ["50+ Languages Supported", "Website & App Localisation", "Legal & Technical Translation", "Certified & Proofreaded Translations"],
+    features: ["50+ Languages Supported", "Website & App Localisation", "Legal & Technical Translation", "Certified & Proofread Translations"],
     color: "from-primary-500 to-accent-500",
     bgColor: "bg-gradient-to-br from-primary-50 to-accent-50",
     borderColor: "border-primary-400",

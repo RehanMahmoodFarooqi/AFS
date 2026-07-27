@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import nodemailer from "nodemailer";
 
 export async function POST(req: NextRequest) {
   try {
@@ -8,22 +9,22 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "All fields are required." }, { status: 400 });
     }
 
-    const apiKey = process.env.RESEND_API_KEY;
+    const user = process.env.GMAIL_USER;
+    const pass = process.env.GMAIL_APP_PASSWORD;
 
-    console.log("API Key loaded:", apiKey ? `${apiKey.substring(0, 8)}...` : "MISSING");
-
-    if (!apiKey || apiKey === "re_your_api_key_here") {
-      // Resend not configured — silently succeed so the site still builds & runs
-      console.warn("RESEND_API_KEY not set. Email not sent.");
-      return NextResponse.json({ success: true }, { status: 200 });
+    if (!user || !pass) {
+      console.warn("Gmail credentials not set. Email not sent.");
+      return NextResponse.json({ error: "Email service not configured." }, { status: 500 });
     }
 
-    const { Resend } = await import("resend");
-    const resend = new Resend(apiKey);
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: { user, pass },
+    });
 
-    const { error } = await resend.emails.send({
-      from: "AFS Contact Form <onboarding@resend.dev>",
-      to: ["contact@afsdevelopment.com"],
+    await transporter.sendMail({
+      from: `"AFS Contact Form" <${user}>`,
+      to: user,
       replyTo: email,
       subject: `New enquiry from ${name}`,
       html: `
@@ -57,14 +58,9 @@ export async function POST(req: NextRequest) {
       `,
     });
 
-    if (error) {
-      console.error("Resend error:", error);
-      return NextResponse.json({ error: "Failed to send email." }, { status: 500 });
-    }
-
     return NextResponse.json({ success: true }, { status: 200 });
   } catch (err) {
     console.error("Contact API error:", err);
-    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
+    return NextResponse.json({ error: "Failed to send email. Please try again." }, { status: 500 });
   }
 }
