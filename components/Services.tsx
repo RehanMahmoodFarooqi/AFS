@@ -76,7 +76,7 @@ const services = [
     icon: TrendingUp,
     title: "Digital/Social Media Marketing",
     description: "Revenue-generating digital marketing campaigns across top platforms, driving qualified traffic and conversions.",
-    features: ["ClickBank", "JVZoo & WarriorPlus", "Ad Network Management", "Conversion Optimisation"],
+    features: ["Affiliate Markeeting", "Linkedin", "Facebook", "Instagram", "Tiktok", "Google Ads"],
     color: "from-accent-500 to-accent-700",
     bgColor: "bg-accent-50",
     borderColor: "border-accent-500",
